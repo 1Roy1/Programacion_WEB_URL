@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión de Aulas - Universidad Central</title>
+    <title>Sistema de Gestión de Aulas - Universidad Rafael Landívar</title>
     <meta name="description" content="Plataforma para la administración y reserva de espacios académicos.">
 </head>
 <body>
@@ -61,16 +61,22 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>A-101</td>
+                        <td><strong>A-101</strong></td>
                         <td>30 personas</td>
                         <td>Teórica</td>
                         <td>Disponible</td>
                     </tr>
                     <tr>
-                        <td>LAB-02</td>
+                        <td><strong>LAB-02</strong></td>
                         <td>15 personas</td>
                         <td>Laboratorio de Cómputo</td>
                         <td>Ocupada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B-205</strong></td>
+                        <td>45 personas</td>
+                        <td>Auditorio</td>
+                        <td>Disponible</td>
                     </tr>
                 </tbody>
             </table>
@@ -85,18 +91,24 @@
                 <fieldset>
                     <legend>Detalles de la solicitud</legend>
                     
-                    <label for="aula-select">Seleccione el Aula:</label>
-                    <select id="aula-select" name="aula_id" required>
-                        <option value="">-- Seleccionar --</option>
-                        <option value="A-101">Aula A-101 (Teórica)</option>
-                        <option value="LAB-02">Lab 02 (Cómputo)</option>
-                    </select>
+                    <p>
+                        <label for="aula-select">Seleccione el Aula:</label>
+                        <select id="aula-select" name="aula_id" required>
+                            <option value="">-- Seleccionar --</option>
+                            <option value="A-101">Aula A-101 (Teórica)</option>
+                            <option value="LAB-02">Lab 02 (Cómputo)</option>
+                        </select>
+                    </p>
 
-                    <label for="fecha-reserva">Fecha:</label>
-                    <input type="date" id="fecha-reserva" name="fecha" required>
+                    <p>
+                        <label for="fecha-reserva">Fecha:</label>
+                        <input type="date" id="fecha-reserva" name="fecha" required>
+                    </p>
 
-                    <label for="hora-reserva">Hora de inicio:</label>
-                    <input type="time" id="hora-reserva" name="hora" required>
+                    <p>
+                        <label for="hora-reserva">Hora de inicio:</label>
+                        <input type="time" id="hora-reserva" name="hora" required>
+                    </p>
                 </fieldset>
 
                 <button type="submit">Confirmar Reserva</button>
@@ -106,7 +118,7 @@
         <hr>
 
         <section id="mis-reservas" aria-labelledby="titulo-historial">
-            <h2 id="titulo-historial">Mis Reservas</h2>
+            <h2 id="titulo-historial">Mis Reservas Recientes</h2>
             
             <table>
                 <thead>
@@ -114,18 +126,21 @@
                         <th scope="col">Aula</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Horario</th>
+                        <th scope="col">Estatus</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>A-204</td>
-                        <td><time datetime="2023-11-15">15/11/2023</time></td>
+                        <td><strong>A-204</strong></td>
+                        <td><time datetime="2023-11-15">15 Nov 2023</time></td>
                         <td>08:00 - 10:00</td>
+                        <td>Confirmada</td>
                     </tr>
                     <tr>
-                        <td>LAB-05</td>
-                        <td><time datetime="2023-11-20">20/11/2023</time></td>
+                        <td><strong>LAB-05</strong></td>
+                        <td><time datetime="2023-11-20">20 Nov 2023</time></td>
                         <td>14:00 - 16:00</td>
+                        <td>Confirmada</td>
                     </tr>
                 </tbody>
             </table>
