@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Aulas - Universidad Central</title>
+    <meta name="description" content="Plataforma para la administración y reserva de espacios académicos.">
+</head>
+<body>
 
+    <header>
+        <hgroup>
+            <h1>Sistema de Gestión de Aulas</h1>
+            <h2>Universidad Central</h2>
+        </hgroup>
+        
+        <section aria-label="Información de usuario">
+            <p>Bienvenido, <strong>Juan Pérez</strong> (Estudiante)</p>
+        </section>
+    </header>
+
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="#dashboard">Inicio</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#reservar">Reservar Aula</a></li>
+            <li><a href="#mis-reservas">Mis Reservas</a></li>
+            <li><a href="/admin">Administración</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="dashboard" aria-labelledby="titulo-dashboard">
+            <h2 id="titulo-dashboard">Panel General</h2>
+            
+            <article>
+                <h3>Aulas Disponibles</h3>
+                <p><strong>12</strong> espacios libres hoy</p>
+            </article>
+
+            <article>
+                <h3>Reservas Activas</h3>
+                <p><strong>45</strong> reservas en curso</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="aulas" aria-labelledby="titulo-aulas">
+            <h2 id="titulo-aulas">Catálogo de Aulas</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Capacidad</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>30 personas</td>
+                        <td>Teórica</td>
+                        <td>Disponible</td>
+                    </tr>
+                    <tr>
+                        <td>LAB-02</td>
+                        <td>15 personas</td>
+                        <td>Laboratorio de Cómputo</td>
+                        <td>Ocupada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="reservar" aria-labelledby="titulo-reserva">
+            <h2 id="titulo-reserva">Nueva Reservación</h2>
+            
+            <form action="/procesar-reserva" method="POST">
+                <fieldset>
+                    <legend>Detalles de la solicitud</legend>
+                    
+                    <label for="aula-select">Seleccione el Aula:</label>
+                    <select id="aula-select" name="aula_id" required>
+                        <option value="">-- Seleccionar --</option>
+                        <option value="A-101">Aula A-101 (Teórica)</option>
+                        <option value="LAB-02">Lab 02 (Cómputo)</option>
+                    </select>
+
+                    <label for="fecha-reserva">Fecha:</label>
+                    <input type="date" id="fecha-reserva" name="fecha" required>
+
+                    <label for="hora-reserva">Hora de inicio:</label>
+                    <input type="time" id="hora-reserva" name="hora" required>
+                </fieldset>
+
+                <button type="submit">Confirmar Reserva</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="mis-reservas" aria-labelledby="titulo-historial">
+            <h2 id="titulo-historial">Mis Reservas</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Aula</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A-204</td>
+                        <td><time datetime="2023-11-15">15/11/2023</time></td>
+                        <td>08:00 - 10:00</td>
+                    </tr>
+                    <tr>
+                        <td>LAB-05</td>
+                        <td><time datetime="2023-11-20">20/11/2023</time></td>
+                        <td>14:00 - 16:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <section>
+            <h3>Universidad Central</h3>
+            <p>Departamento de Ingeniería y Ciencias Aplicadas</p>
+            <p>Sistema de Gestión Académica v1.0</p>
+        </section>
+        
+        <p><small>&copy; <time datetime="2023">2023</time> Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>
