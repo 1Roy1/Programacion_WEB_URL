@@ -1,0 +1,48 @@
+:root {
+    --landivar-blue: #003366; 
+    --landivar-accent: #f8f9fa;
+}
+
+body {
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: white;
+    border-bottom: 3px solid var(--landivar-blue);
+}
+
+/* Navbar estilo Landívar */
+.navbar-custom {
+    background-color: var(--landivar-blue);
+}
+
+/* Tarjetas del Dashboard */
+.stat-card {
+    transition: transform 0.2s;
+    border: none;
+    border-left: 5px solid var(--landivar-blue);
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
+/* Ajustes de tablas */
+.table thead {
+    background-color: var(--landivar-blue);
+    color: white;
+}
+
+.profile {
+    border-radius: 20%;
+    border: 1px solid var(--landivar-blue);
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: #adb5bd;
+}
