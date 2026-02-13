@@ -173,6 +173,10 @@
         <section id="mis-reservas" aria-labelledby="titulo-historial">
             <div class="d-flex align-items-center mb-3">
                 <h2 id="titulo-historial" class="h4 text-secondary mb-0">Mis reservas recientes</h2>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <span id="total-reservas" class="badge bg-info text-dark">Total de reservas: 0</span>
+                    <button id="btn-ordenar" class="btn btn-outline-primary btn-sm"><i class="bi bi-sort-down me-1"></i>Ordenar por fecha</button>
+                </div>
             </div>
 
             <div class="card shadow-sm border-0">
@@ -187,19 +191,8 @@
                                     <th scope="col">Estatus</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="ps-4"><strong>A-204</strong></td>
-                                    <td><time datetime="2023-11-15">15 Nov 2023</time></td>
-                                    <td>08:00 - 10:00</td>
-                                    <td><span class="badge bg-secondary">Histórico</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="ps-4"><strong>LAB-05</strong></td>
-                                    <td><time datetime="2023-11-20">20 Nov 2023</time></td>
-                                    <td>14:00 - 16:00</td>
-                                    <td><span class="badge bg-primary">Confirmada</span></td>
-                                </tr>
+                            <tbody id="lista-reservas">
+                                <!-- Las reservas se renderizarán aquí dinámicamente -->
                             </tbody>
                         </table>
                     </div>
